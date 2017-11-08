@@ -7,7 +7,7 @@ function dirs( )
        fh = fopen(f{1});
        line1 = fgetl(fh);
        desc = [];
-       while ischar(line1) && line1(3) ~= ' ' && isempty(strfind(line1, 'function'))
+       while ischar(line1) && isempty(strfind(line, '   ')) && isempty(strfind(line1, 'function'))
            desc = [desc, strtrim(line1(2:end))];
            line1 = fgetl(fh);
        end
