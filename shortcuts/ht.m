@@ -1,11 +1,23 @@
 % HT Open the Homework Team drive folder.
 %    htDir(NUM) opens the folder for Homework NUM, if it exists.
+
+% TODO 
+% - Allow searching for homework problem names
+% - Command line options?
 function ht(varargin)
 % location of the base directory
 BASE_DIR = 'C:\Users\Daniel\Google Drive\Homework Team\201703_FAL';
 
 cd(BASE_DIR)
-if ~isempty(varargin) && isnumeric(varargin{1})
+if ischar(varargin{1})
+    if strcmp(num2str(str2num(varargin{1})), varargin{1})
+        varargin{1} = str2num(varargin{1});
+    else
+        error('Invalid input ''%s''!', varargin{1})
+    end
+end
+
+if ~isempty(varargin)
     files = dir();
     files = files([files.isdir]);
     names = {files.name};
