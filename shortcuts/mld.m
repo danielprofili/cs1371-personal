@@ -1,4 +1,8 @@
 % MLD Open the MATLAB home directory
 function mld()
-cd C:\Users\Daniel\Documents\MATLAB
+if ispc
+    cd C:\Users\Daniel\Documents\MATLAB
+else
+    cd /home/daniel/Documents/MATLAB
+end
 end

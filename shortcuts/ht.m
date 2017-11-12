@@ -6,7 +6,11 @@
 % - Command line options?
 function ht(varargin)
 % location of the base directory
-BASE_DIR = 'C:\Users\Daniel\Google Drive\Homework Team\201703_FAL';
+if ispc
+    BASE_DIR = 'C:\Users\Daniel\Google Drive\Homework Team\201703_FAL';
+else
+    BASE_DIR = '/home/daniel/cs1371/gdrive/Homework Team/201703_FAL';
+end
 
 cd(BASE_DIR)
 if ischar(varargin{1})
