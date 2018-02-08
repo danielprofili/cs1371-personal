@@ -1,7 +1,13 @@
 % DIRS Shows a list of all the directory shortcuts in the MATLAB folder.
 function dirs( )
     clc
-    files = dir('C:\Users\Daniel\Documents\CS1371\cs1371-personal\shortcuts\*.m');
+    BASE_DIR = gd();
+    if ispc
+       BASE_DIR = [BASE_DIR, '\']; 
+    else
+        BASE_DIR = [BASE_DIR, '/'];
+    end
+    files = dir([BASE_DIR, '*.m']);
     files = {files.name};
     for f = files
        fh = fopen(f{1});

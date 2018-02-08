@@ -16,7 +16,7 @@ if ~isempty(varargin) && ischar(varargin{1})
     if strcmp(num2str(str2num(varargin{1})), varargin{1})
         varargin{1} = str2num(varargin{1});
     else
-        % non-numeric character input
+        % non-numeric character input  
         
         error('Invalid input ''%s''!', varargin{1})
     end
