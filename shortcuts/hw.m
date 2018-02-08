@@ -27,7 +27,12 @@ if ~isempty(varargin)
         cd(varargin{2});
     end
     if isnumeric(varargin{1})
-        mask = strcmp(names, ['HW', num2str(varargin{1})]);
+        if varargin{1} < 10
+            numStr = ['0', num2str(varargin{1})];
+        else
+            numStr = num2str(varargin{1});
+        end
+        mask = strcmp(names, ['HW', numStr]);
         files(~mask) = [];
         if length(files) > 1
             fprintf('Found %d possible matches:\n', length(files));
