@@ -1,7 +1,5 @@
 % HW Find a specific homework folder.
 %   hw(NUM) opens the folder corresponding to HW #NUM.
-
-
 function hw(varargin)
 % base directory where all the homework folders are saved
 BASE_DIR = ta();
