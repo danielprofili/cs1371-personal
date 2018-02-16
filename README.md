@@ -1,2 +1,2 @@
 # cs1371-personal
-Personal scripts and functions written for CS1371.
+My personal scripts and functions written for CS1371
