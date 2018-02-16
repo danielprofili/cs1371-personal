@@ -2,7 +2,7 @@
 function varargout = ta()
     if isempty(nargout)
         if ispc
-            cd 'C:\Users\Daniel\Documents\MATLAB\CS1371\TA F2017'
+            cd 'C:\Users\Daniel\Documents\MATLAB\CS1371\TA S2018' % i think?
         else
             cd '/home/daniel/Documents/MATLAB/CS1371/2018Spr'
         end
