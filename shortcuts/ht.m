@@ -9,7 +9,7 @@ function varargout = ht(varargin)
 % location of the base directory
 % BASE_DIR = ta();
 if ispc
-    % TODO
+    BASE_DIR = 'C:\Users\Daniel\Google Drive\Homework Team\201801_SPR';
 else
     BASE_DIR = '/home/daniel/Documents/Google Drive/Homework Team/201801_SPR';
 end

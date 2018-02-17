@@ -7,6 +7,10 @@ function varargout = ta()
             cd '/home/daniel/Documents/MATLAB/CS1371/2018Spr'
         end
     else
-        varargout{1} = '/home/daniel/Documents/MATLAB/CS1371/2018Spr';
+        if ispc
+            varargout{1} = 'C:\Users\Daniel\Documents\MATLAB\CS1371\TA S2018'; % i think?
+        else
+            varargout{1} = '/home/daniel/Documents/MATLAB/CS1371/2018Spr';
+        end
     end
 end
